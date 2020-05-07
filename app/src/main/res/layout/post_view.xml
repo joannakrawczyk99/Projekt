@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="post"
+            type="com.example.projecting.data.Post" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/username_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.5dp"
+            android:background="#CDC1C1"
+            android:fontFamily="monospace"
+            android:text="@{post.username}"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="monospace"
+            android:text="@{post.title}"
+            android:textAlignment="center"
+            android:textColor="@color/lightblue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="monospace"
+            android:text="@{post.body}"
+            android:textAlignment="textStart"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/comments_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CDC1C1"
+            android:fontFamily="monospace"
+            android:text="@{post.countComments + ` comments`}"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textColorHighlight="#CD7373"
+            android:textColorHint="#0C0C0C"
+            android:textColorLink="#E47A7A"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</layout>

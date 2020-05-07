@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="user"
+            type="com.example.projecting.data.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.UserFragment">
+
+            <TextView
+              android:id="@+id/name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="monospace"
+              android:text="@{user.name}"
+              android:textAlignment="center"
+              android:textColor="@color/purple"
+              android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`Username: ` + user.username}"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`E-mail: ` + user.email}"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`Phone: ` + user.phone}"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/userWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`Website: ` + user.website}"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+</layout>

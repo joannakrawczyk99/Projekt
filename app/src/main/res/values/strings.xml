@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProjectING</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="username">Username:</string>
+    <string name="phone">Phone:</string>
+    <string name="website">Website:</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="comment"
+            type="com.example.projecting.data.Comment"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.5dp"
+            android:fontFamily="monospace"
+            android:text="@{comment.email}"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="monospace"
+            android:text="@{comment.name}"
+            android:textAlignment="center"
+            android:textColor="@color/lightblue"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="monospace"
+            android:text="@{comment.body}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</layout>
