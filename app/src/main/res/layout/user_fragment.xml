@@ -5,6 +5,10 @@
         <variable
             name="user"
             type="com.example.projecting.data.User" />
+
+        <variable
+            name="address"
+            type="com.example.projecting.data.Address" />
     </data>
 
     <LinearLayout
@@ -40,14 +44,6 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/userPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="monospace"
-                android:text="@{`Phone: ` + user.phone}"
-                android:textSize="14sp" />
-
-            <TextView
                 android:id="@+id/userWebsite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,5 +51,36 @@
                 android:text="@{`Website: ` + user.website}"
                 android:textSize="14sp" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/userStreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`Street: ` + user.address.street}"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/userCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`City: ` + user.address.city}"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/userZipcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{`Zipcode: ` + user.address.zipcode}"
+                android:textSize="14sp" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="314dp" />
+
+    </LinearLayout>
+
+
 </layout>
