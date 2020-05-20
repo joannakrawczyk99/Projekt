@@ -6,4 +6,4 @@ Po uruchomieniu aplikacji wyświetlają się wszystkie posty (https://jsonplaceh
 do ekranu z komentarzami (https://jsonplaceholder.typicode.com/comments). Pole "nazwa użytkownika" linkuje do ekranu wyświetlającego 
 informacje o użytkowniku. 
 
-Aktualnie pracujemy nad stronicowaniem postów, geolokalizacją, ekranem linkującym do wszystkich zdjęć danego użytkownika i niespodzianką.
+Aktualnie pracujemy nad stronicowaniem postów, ekranem linkującym do wszystkich zdjęć danego użytkownika i niespodzianką.
