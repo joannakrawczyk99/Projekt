@@ -24,6 +24,9 @@
         <argument
             android:name="userId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_userInfo_to_albumList"
+            app:destination="@id/albumsList"/>
 
     </fragment>
     <fragment
@@ -32,7 +35,27 @@
         android:label="CommentsList" >
         <argument
             android:name="postId"
-            app:argType="integer" />
+            app:argType="integer"
+            app:destination="@id/albumsList"/>
     </fragment>
 
+    <fragment
+        android:id="@+id/albumsList"
+        android:name="com.example.projecting.ui.AlbumFragment"
+        android:label="AlbumList">
+        <argument
+            android:name="userId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_albumsList_to_photoList"
+            app:destination="@id/photoList" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoList"
+        android:name="com.example.projecting.ui.PhotoFragment"
+        android:label="PhotoList">
+        <argument
+            android:name="albumId"
+            app:argType="integer"/>
+    </fragment>
 </navigation>

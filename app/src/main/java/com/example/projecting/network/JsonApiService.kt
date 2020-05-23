@@ -16,5 +16,16 @@ interface JsonApiService {
     @GET("/comments")
     fun getComment(): Deferred<List<Comment>>
 
+    @GET("/albums")
+    fun getAlbum(): Deferred<List<Album>>
+
+    @GET("/users/{userId}/albums")
+    fun getAlbumData(@Path("albumId") id: Int): Deferred<Album>
+
+    @GET("/photos")
+    fun getPhoto(): Deferred<List<Photo>>
+
+    @GET("/albums/{albumId}/photos")
+    fun getPhotoData(@Path("albumId") id: Int): Deferred<Photo>
 }
 

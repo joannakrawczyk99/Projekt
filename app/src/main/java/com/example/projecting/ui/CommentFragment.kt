@@ -31,15 +31,15 @@ class CommentFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = CommentFragmentBinding.inflate(inflater, container, false)
 
-        setupRecyclerView()
+        formRecyclerView()
         observeLiveData()
         getPost(args.postId)
 
         return binding.root
     }
 
-    private fun setupRecyclerView() {
-        val rView: RecyclerView = binding.commentsView
+    private fun formRecyclerView() {
+        val rView: RecyclerView = binding.commentRview
         val layoutManager = GridLayoutManager(activity, GridLayoutManager.VERTICAL)
         rView.layoutManager = layoutManager
 

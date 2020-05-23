@@ -1,12 +1,10 @@
 package com.example.projecting
 
 import android.app.Application
-import com.example.projecting.ui.viewModel.CommentViewModel
-import com.example.projecting.ui.viewModel.PostViewModel
-import com.example.projecting.ui.viewModel.UserViewModel
 import com.example.projecting.network.JsonApi
 import com.example.projecting.network.JsonApiService
 import com.example.projecting.repo.*
+import com.example.projecting.ui.viewModel.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
@@ -29,6 +27,12 @@ class Application : Application() {
         single {
             UserRepo(jsonApiService = get())
         }
+        single {
+            AlbumRepo(jsonApiService = get())
+        }
+        single {
+            PhotoRepo(jsonApiService = get())
+        }
 
         viewModel {
             PostViewModel(
@@ -48,6 +52,19 @@ class Application : Application() {
                 postRepo = get()
             )
         }
+        viewModel {
+            AlbumViewModel(
+                albumRepo = get(),
+                userRepo = get()
+            )
+        }
+        viewModel {
+            PhotoViewModel(
+                photoRepo = get(),
+                albumRepo = get()
+            )
+        }
+
 
     }
     override fun onCreate() {

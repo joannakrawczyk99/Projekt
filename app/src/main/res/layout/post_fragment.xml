@@ -17,11 +17,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.MainActivity"
+        android:background="@color/white">
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/posts_view"
+            android:id="@+id/post_rview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"

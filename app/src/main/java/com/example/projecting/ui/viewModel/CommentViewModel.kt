@@ -11,7 +11,9 @@ import com.example.projecting.Reaction
 import com.example.projecting.Result
 import kotlinx.coroutines.launch
 
-class CommentViewModel(val commentRepo: CommentRepo, val postRepo: PostRepo) : ViewModel() {
+class CommentViewModel(
+    val commentRepo: CommentRepo,
+    val postRepo: PostRepo) : ViewModel() {
 
     val commentsLiveData: MutableLiveData<List<Comment>> = MutableLiveData()
     val postLiveData: MutableLiveData<Post> = MutableLiveData()

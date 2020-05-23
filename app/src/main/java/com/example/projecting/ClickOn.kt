@@ -10,4 +10,12 @@ class ClickOn {
     interface ClickOnPost{
         fun clickPost(post: Post)
     }
+
+    interface ClickOnAlbum{
+        fun clickAlbum(userId: Int?)
+    }
+
+    interface  ClickOnPhoto{
+        fun clickPhoto(albumId: Int?)
+    }
 }

@@ -19,7 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.UserFragment">
+        tools:context=".ui.UserFragment"
+        android:background="@color/white">
 
             <TextView
               android:id="@+id/name"
@@ -92,7 +93,24 @@
             app:layout_constraintTop_toBottomOf="@+id/zipcode_placeholder"
             app:layout_constraintVertical_bias="0.0" />
 
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/albumbtn"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:text="@{`See albums`}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
-
 </layout>

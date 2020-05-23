@@ -25,15 +25,15 @@ class PostFragment() : Fragment(), ClickOn.ClickOnUser, ClickOn.ClickOnPost{
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = PostFragmentBinding.inflate(inflater, container, false)
 
-        setupRecyclerView()
+        formRecyclerView()
         observeLiveData()
         getPosts()
 
         return binding.root
     }
 
-    private fun setupRecyclerView() {
-        val rView: RecyclerView = binding.postsView
+    private fun formRecyclerView() {
+        val rView: RecyclerView = binding.postRview
         val layoutManager: GridLayoutManager = GridLayoutManager(activity, GridLayoutManager.VERTICAL)
         rView.layoutManager = layoutManager
 
@@ -47,7 +47,9 @@ class PostFragment() : Fragment(), ClickOn.ClickOnUser, ClickOn.ClickOnPost{
     }
 
     private fun observeLiveData() {
-        postViewModel.postsLiveData.observe(viewLifecycleOwner, Observer { onPostsReceived(it) })
+        postViewModel.postsLiveData.observe(viewLifecycleOwner, Observer {
+            onPostsReceived(it)
+        })
     }
 
     private fun getPosts() {
@@ -74,4 +76,6 @@ class PostFragment() : Fragment(), ClickOn.ClickOnUser, ClickOn.ClickOnPost{
         }
         findNavController().navigate(action)
     }
+
+
 }
