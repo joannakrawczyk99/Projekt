@@ -20,72 +20,77 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".ui.UserFragment"
-        android:background="@color/white">
+        android:background="@color/background"
+        android:padding="20dp">
 
-            <TextView
-              android:id="@+id/name"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:fontFamily="monospace"
-              android:text="@{user.name}"
-              android:textAlignment="center"
-              android:textColor="@color/purple"
-              android:textSize="16sp" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chivo"
+            android:text="@{user.name}"
+            android:textColor="@color/text3"
+            android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/chivo"
                 android:text="@{`Username: ` + user.username}"
-                android:textSize="14sp" />
+                android:textColor="@color/text2"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/userEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/chivo"
                 android:text="@{`E-mail: ` + user.email}"
-                android:textSize="14sp" />
+                android:textColor="@color/text2"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/userWebsite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/chivo"
                 android:text="@{`Website: ` + user.website}"
-                android:textSize="14sp" />
+                android:textColor="@color/text2"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/userStreet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/chivo"
                 android:text="@{`Street: ` + user.address.street}"
-                android:textSize="14sp" />
+                android:textColor="@color/text2"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/userCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/chivo"
                 android:text="@{`City: ` + user.address.city}"
-                android:textSize="14sp" />
+                android:textColor="@color/text2"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/userZipcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/chivo"
                 android:text="@{`Zipcode: ` + user.address.zipcode}"
-                android:textSize="14sp" />
-
+                android:textColor="@color/text2"
+                android:textSize="16sp" />
 
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/mapView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="374dp"
+            android:layout_height="335dp"
             android:layout_marginTop="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,15 +104,19 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:padding="20dp">
 
         <Button
             android:id="@+id/albumbtn"
-            android:layout_width="146dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="112dp"
+            android:background="@color/btn"
+            android:fontFamily="@font/chivo"
             android:text="@{`See albums`}"
+            android:textColor="@color/text3"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
 

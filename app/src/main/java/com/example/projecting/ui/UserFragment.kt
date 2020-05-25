@@ -11,24 +11,24 @@ import androidx.navigation.fragment.navArgs
 import com.example.projecting.ClickOn
 import com.example.projecting.ui.viewModel.UserViewModel
 import com.example.projecting.data.User
-import com.example.projecting.databinding.UserFragmentBinding
+import com.example.projecting.databinding.UserViewBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import kotlinx.android.synthetic.main.user_fragment.*
+import kotlinx.android.synthetic.main.user_view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserFragment : Fragment(), OnMapReadyCallback, ClickOn.ClickOnAlbum{
-    private lateinit var binding: UserFragmentBinding
+    private lateinit var binding: UserViewBinding
     private lateinit var userData: User
     private lateinit var googleMap: GoogleMap
     private val userViewModel: UserViewModel by viewModel()
     val args: UserFragmentArgs by navArgs() //This take userId only from post
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = UserFragmentBinding.inflate(inflater, container, false)
+        binding = UserViewBinding.inflate(inflater, container, false)
         getUserData(args.userId)
         observeLiveData()
 

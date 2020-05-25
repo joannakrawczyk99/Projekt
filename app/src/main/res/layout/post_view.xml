@@ -9,58 +9,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="20dp">
 
         <TextView
-            android:id="@+id/username_button"
+            android:id="@+id/username_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2.5dp"
-            android:background="#CDC1C1"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/chivo"
             android:text="@{post.username}"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textSize="16sp"
-            android:textStyle="bold|italic" />
+            android:textColor="@color/text3"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/chivo"
             android:text="@{post.title}"
-            android:textAlignment="center"
-            android:textColor="@color/lightblue"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textColor="@color/text1"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/chivo"
             android:text="@{post.body}"
-            android:textAlignment="textStart"
-            android:textColor="@color/grey"
-            android:textSize="14sp" />
+            android:textColor="@color/text2"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/comments_button"
+            android:id="@+id/comment_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CDC1C1"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/chivo"
             android:text="@{post.countComments + ` comments`}"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textColorHighlight="#CD7373"
-            android:textColorHint="#0C0C0C"
-            android:textColorLink="#E47A7A"
-            android:textSize="14sp"
-            android:textStyle="italic" />
+            android:textColor="@color/text1"
+            android:textSize="16sp" />
 
     </LinearLayout>
 </layout>

@@ -26,10 +26,10 @@ class PostAdapter(
         }
 
         init{
-            itemView.username_button.setOnClickListener {
+            itemView.username_btn.setOnClickListener {
                 this.clickOnUser.clickUser(posts[adapterPosition].userId)
             }
-            itemView.comments_button.setOnClickListener{
+            itemView.comment_btn.setOnClickListener{
                 this.clickOnPost.clickPost(posts[adapterPosition])
             }
         }
