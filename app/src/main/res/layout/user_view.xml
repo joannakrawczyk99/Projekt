@@ -99,20 +99,13 @@
             app:layout_constraintVertical_bias="0.0" />
 
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
-
         <Button
             android:id="@+id/albumbtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
             android:background="@color/btn"
             android:fontFamily="@font/chivo"
-            android:text="@{`See albums`}"
+            android:text="@{`ALBUMS`}"
             android:textColor="@color/text3"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -120,6 +113,6 @@
             app:layout_constraintStart_toStartOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 </layout>

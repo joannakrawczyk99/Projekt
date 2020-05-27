@@ -29,15 +29,15 @@
         <Button
             android:id="@+id/photobtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/chivo"
+            android:layout_height="33dp"
             android:background="@color/btn"
+            android:fontFamily="@font/chivo"
+            android:text="@{`PHOTOS`}"
             android:textColor="@color/text3"
-            android:text="@{`See photos`}"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 </layout>

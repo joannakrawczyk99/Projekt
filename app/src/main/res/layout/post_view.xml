@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="post"
@@ -11,15 +12,19 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <TextView
+        <Button
             android:id="@+id/username_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
+            android:background="@color/btn"
             android:layout_marginBottom="2.5dp"
             android:fontFamily="@font/chivo"
             android:text="@{post.username}"
             android:textColor="@color/text3"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/title"
@@ -41,14 +46,18 @@
             android:textColor="@color/text2"
             android:textSize="16sp" />
 
-        <TextView
+        <Button
             android:id="@+id/comment_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
+            android:background="@color/btn"
             android:fontFamily="@font/chivo"
             android:text="@{post.countComments + ` comments`}"
             android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </LinearLayout>
 </layout>
