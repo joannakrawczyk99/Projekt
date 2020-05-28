@@ -11,12 +11,17 @@ import com.example.projecting.Reaction
 import com.example.projecting.Result
 import kotlinx.coroutines.launch
 
-class PostViewModel(val postRepo: PostRepo, val userRepo: UserRepo, val commentRepo: CommentRepo) : ViewModel() {
+class PostViewModel(val postRepo: PostRepo, val userRepo: UserRepo, val commentRepo: CommentRepo) : ViewModel(){
     val postsLiveData: MutableLiveData<List<Post>> = MutableLiveData()
+
+    var postPagingLimit = 10
+    var postPagingStart = 0
+
+
 
     fun getPosts() {
         viewModelScope.launch {
-            val listOfPosts = postRepo.getPosts()
+            val listOfPosts = postRepo.getPagedPosts(postPagingStart, postPagingLimit)
             val listOfUsers = userRepo.getNames()
             val quantityoOfComments = commentRepo.getCount(listOfPosts.data)
 
@@ -36,4 +41,5 @@ class PostViewModel(val postRepo: PostRepo, val userRepo: UserRepo, val commentR
             postsLiveData.postValue(reaction.data)
         }
     }
+
 }

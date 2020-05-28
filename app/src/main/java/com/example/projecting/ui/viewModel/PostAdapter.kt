@@ -9,11 +9,11 @@ import kotlinx.android.synthetic.main.post_view.view.*
 import com.example.projecting.ClickOn.*
 import com.example.projecting.ui.PostFragment
 
-class PostAdapter(
+class PostAdapter (
     var posts: List<Post>,
     var clickOnPost: ClickOnPost,
     var clickOnUser: PostFragment
-) : RecyclerView.Adapter<PostAdapter.PostsViewHolder>(){
+) : RecyclerView.Adapter<PostAdapter.PostsViewHolder>() {
 
     inner class PostsViewHolder(
         val binding: PostViewBinding,
