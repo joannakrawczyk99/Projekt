@@ -10,4 +10,10 @@ class PostRepo(val jsonApiService: JsonApiService): ApiRequest() {
             jsonApiService.getPost().await()
         }
     )
+
+    suspend fun getPagedPosts(pageStart: Int, pageLimit: Int): Reaction<List<Post>> = apiRequest (
+        onSucc = {
+            jsonApiService.getPageOfPostsAsync(pageStart, pageLimit).await()
+        }
+    )
 }

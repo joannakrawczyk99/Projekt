@@ -9,14 +9,24 @@ import com.example.projecting.repo.PostRepo
 import com.example.projecting.repo.UserRepo
 import com.example.projecting.Reaction
 import com.example.projecting.Result
+import com.example.projecting.data.Comment
+import com.example.projecting.data.User
+import com.example.projecting.network.JsonApi
+import com.example.projecting.network.JsonApiService
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.launch
 
-class PostViewModel(val postRepo: PostRepo, val userRepo: UserRepo, val commentRepo: CommentRepo) : ViewModel() {
+class PostViewModel(val postRepo: PostRepo, val userRepo: UserRepo, val commentRepo: CommentRepo) : ViewModel(){
     val postsLiveData: MutableLiveData<List<Post>> = MutableLiveData()
+
+    var postPagingLimit = 10
+    var postPagingStart = 0
+
+
 
     fun getPosts() {
         viewModelScope.launch {
-            val listOfPosts = postRepo.getPosts()
+            val listOfPosts = postRepo.getPagedPosts(postPagingStart, postPagingLimit)
             val listOfUsers = userRepo.getNames()
             val quantityoOfComments = commentRepo.getCount(listOfPosts.data)
 
@@ -36,4 +46,5 @@ class PostViewModel(val postRepo: PostRepo, val userRepo: UserRepo, val commentR
             postsLiveData.postValue(reaction.data)
         }
     }
+
 }

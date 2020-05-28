@@ -35,6 +35,7 @@ class Application : Application() {
                 postRepo = get(),
                 userRepo = get(),
                 commentRepo = get()
+
             )
         }
 
