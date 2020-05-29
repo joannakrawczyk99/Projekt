@@ -23,17 +23,17 @@
             android:fontFamily="@font/chivo"
             android:gravity="center_vertical"
             android:text="@{album.title}"
-            android:textColor="@color/text2"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/photobtn"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:background="@color/btn"
+            android:background="@color/white"
             android:fontFamily="@font/chivo"
             android:text="@{`PHOTOS`}"
-            android:textColor="@color/text3"
+            android:textColor="@color/orange"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

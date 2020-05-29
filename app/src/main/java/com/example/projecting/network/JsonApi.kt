@@ -17,4 +17,6 @@ class JsonApi(private val context: Context) {
         return retrofit.create(JsonApiService::class.java)
     }
     val BASE_URL ="https://jsonplaceholder.typicode.com"
+
+
 }

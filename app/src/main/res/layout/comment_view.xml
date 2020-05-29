@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="comment"
@@ -13,13 +14,20 @@
         android:background="@color/background"
         android:padding="20dp">
 
+        <ImageView
+            android:id="@+id/penPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            app:srcCompat="@drawable/pencil"
+            android:paddingBottom="4dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2.5dp"
             android:fontFamily="@font/chivo"
             android:text="@{comment.email}"
-            android:textColor="@color/text3"
+            android:textColor="@color/orange"
             android:textSize="20sp" />
 
         <TextView
@@ -28,7 +36,7 @@
             android:layout_marginBottom="2dp"
             android:fontFamily="@font/chivo"
             android:text="@{comment.name}"
-            android:textColor="@color/text1"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
 
@@ -38,7 +46,7 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/chivo"
             android:text="@{comment.body}"
-            android:textColor="@color/text2"
+            android:textColor="@color/grey"
             android:textSize="16sp" />
 
     </LinearLayout>

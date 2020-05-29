@@ -70,4 +70,6 @@ class PhotoFragment : Fragment() {
     private fun getAlbum(albumId: Int){
         viewModel.getAlbum(albumId)
     }
+
+
 }

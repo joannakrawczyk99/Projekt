@@ -2,10 +2,14 @@ package com.example.projecting.ui.viewModel
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.projecting.R
 import com.example.projecting.data.Photo
 import com.example.projecting.databinding.PhotoViewBinding
+import com.squareup.picasso.Picasso
 
 class PhotoAdapter (
     var photos: List<Photo>
@@ -18,6 +22,7 @@ class PhotoAdapter (
         fun databind(photo: Photo){
             binding.photo = photo
             binding.executePendingBindings()
+
 
             Glide.with(binding.imageview)
                 .load(photo.thumbnailUrl)
@@ -43,4 +48,6 @@ class PhotoAdapter (
         this.photos = photos
         notifyDataSetChanged()
     }
+
+
 }

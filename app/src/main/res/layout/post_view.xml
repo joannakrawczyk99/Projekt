@@ -12,19 +12,27 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+
+        <ImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            app:srcCompat="@drawable/user"
+            android:paddingBottom="4dp"/>
+
         <Button
             android:id="@+id/username_btn"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:background="@color/btn"
             android:layout_marginBottom="2.5dp"
+            android:background="@color/white"
             android:fontFamily="@font/chivo"
             android:text="@{post.username}"
-            android:textColor="@color/text3"
+            android:textColor="@color/orange"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/title"
@@ -33,7 +41,7 @@
             android:layout_marginBottom="2dp"
             android:fontFamily="@font/chivo"
             android:text="@{post.title}"
-            android:textColor="@color/text1"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -43,17 +51,17 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/chivo"
             android:text="@{post.body}"
-            android:textColor="@color/text2"
+            android:textColor="@color/grey"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/comment_btn"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:background="@color/btn"
             android:fontFamily="@font/chivo"
             android:text="@{post.countComments + ` comments`}"
-            android:textColor="@color/text1"
+            android:textColor="@color/orange"
+            android:background="@color/white"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
