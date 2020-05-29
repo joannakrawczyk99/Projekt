@@ -24,8 +24,9 @@ class PhotoAdapter (
             binding.executePendingBindings()
 
 
-            Glide.with(binding.imageview)
-                .load(photo.thumbnailUrl)
+            Picasso
+                .get()
+                .load(photo.url)
                 .into(binding.imageview)
         }
     }
