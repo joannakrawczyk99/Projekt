@@ -12,7 +12,7 @@ The project uses information contained in https://jsonplaceholder.typicode.com/.
 - displaying all posts (username, title, body, comments)
 - view paging
 
-![Screenshot_20200601-090940](https://user-images.githubusercontent.com/56791894/83385012-b2756680-a3e8-11ea-9708-62fca24857cf.png)
+![Screenshot_20200601-090940](https://user-images.githubusercontent.com/56791894/83385012-b2756680-a3e8-11ea-9708-62fca24857cf.png =250x250)
 
 <h2>Task 2</h2>
 - displaying all comments for a given post (name, email, body)
