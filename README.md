@@ -12,6 +12,8 @@ Task 1
 - displaying all posts (username, title, body, comments)
 - view paging
 
+https://github.com/joannakrawczyk99/Projekt/issues/1#issue-628211815
+
 Task 2
 - displaying all comments for a given post (name, email, body)
 
