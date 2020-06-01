@@ -10,6 +10,7 @@ The project uses information contained in https://jsonplaceholder.typicode.com/.
 
 Task 1
 - displaying all posts (username, title, body, comments)
+- view paging
 
 Task 2
 - displaying all comments for a given post (name, email, body)
