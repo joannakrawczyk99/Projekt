@@ -24,4 +24,12 @@ Task 4
 
 
 
+We want to add: 
+- messages related to various operational problems
+- new layout
+- implement tests
+
+
+
+
 
